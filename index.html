@@ -8,7 +8,8 @@
     body {
       background-color: black;
       margin: 0;
-      height: 100vh;
+      min-height: 100vh;
+      overflow: hidden;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -26,6 +27,9 @@
     .countdown {
       margin-top: 30px;
       font-size: 1.2rem;
+      text-align: center;
+      max-width: 90%;
+      line-height: 1.4;
     }
 
     @media (min-width: 1200px) {
@@ -44,7 +48,8 @@
 <body>
   <img src="files/Gugyto.cz.jpg" alt="Logo YouTube kanálu Gugýto">
   <div class="countdown">
-    Budete přesměrováni na YouTube za <span id="timer">8</span> sekund...
+    Budete přesměrováni na YouTube<br>
+    za <span id="timer">8</span> sekund...
   </div>
 
   <script>
