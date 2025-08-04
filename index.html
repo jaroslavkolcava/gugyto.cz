@@ -12,14 +12,14 @@
     body {
       background-color: black;
       margin: 0;
-      height: 100dvh;
-      overflow-y: hidden;
+      min-height: 100dvh;
       display: flex;
       align-items: center;
       justify-content: center;
       flex-direction: column;
       font-family: sans-serif;
       color: white;
+      padding: 20px 0; /* přidá místo nahoře a dole */
     }
 
     img {
@@ -29,7 +29,7 @@
     }
 
     .countdown {
-      margin-top: 16px; /* přiblížený text */
+      margin-top: 16px;
       font-size: 1.2rem;
       text-align: center;
       max-width: 90%;
