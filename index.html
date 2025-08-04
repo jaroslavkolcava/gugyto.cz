@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="cs">
 <head>
   <meta charset="UTF-8">
@@ -16,15 +16,22 @@
     }
 
     img {
-      width: 60%;           /* Na mobilu se obrázek roztáhne na 60% šířky */
-      max-width: 700px;     /* Na monitorech bude obrázek maximálně 700px široký */
-      height: auto;         /* Zachová poměr stran */
+      width: 60%;
+      max-width: 700px;
+      height: auto;
     }
 
-    /* Pokud máš velmi velký monitor, můžeme zvětšit logo ještě více */
+    /* Na velkých monitorech zvětšíme logo */
     @media (min-width: 1200px) {
       img {
-        max-width: 900px;   /* Na velkých monitorech bude logo maximálně 900px široké */
+        max-width: 900px;
+      }
+    }
+
+    /* Na telefonech bude logo větší */
+    @media (max-width: 600px) {
+      img {
+        width: 90%;
       }
     }
   </style>
