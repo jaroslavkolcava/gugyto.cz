@@ -9,31 +9,38 @@
       box-sizing: border-box;
     }
 
-    body {
+    html, body {
       margin: 0;
       padding: 0;
+      height: 100%;
+      overflow: hidden;
       background-color: black;
       font-family: sans-serif;
       color: white;
+    }
+
+    .wrapper {
+      height: 100%;
+      width: 100%;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      min-height: 100vh;
     }
 
     img {
       width: 60%;
       max-width: 700px;
       height: auto;
+      display: block;
     }
 
     .countdown {
-      margin-top: 12px;
-      font-size: 1.2rem;
+      margin-top: 8px; /* co nejmenší mezera */
+      font-size: 1.1rem; /* mírně menší pro úsporu místa */
       text-align: center;
+      line-height: 1.2;
       max-width: 90%;
-      line-height: 1.4;
     }
 
     @media (min-width: 1200px) {
@@ -50,10 +57,12 @@
   </style>
 </head>
 <body>
-  <img src="files/Gugyto.cz.jpg" alt="Logo YouTube kanálu Gugýto">
-  <div class="countdown">
-    Budete přesměrováni na YouTube<br>
-    za <span id="timer">8</span> sekund...
+  <div class="wrapper">
+    <img src="files/Gugyto.cz.jpg" alt="Logo YouTube kanálu Gugýto">
+    <div class="countdown">
+      Budete přesměrováni na YouTube<br>
+      za <span id="timer">8</span> sekund...
+    </div>
   </div>
 
   <script>
