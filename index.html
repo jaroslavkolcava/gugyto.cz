@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="cs">
 <head>
@@ -161,9 +162,6 @@
   </div>
 
   <script>
-    // Přidáme duplicitní záznam do historie pro zachování cesty i při zpětném kroku
-    history.pushState({page: 'gugyto-duplicate'}, '', window.location.href);
-
     let seconds = 9;
     const timer = document.getElementById('timer');
 
@@ -174,19 +172,9 @@
       }
       if (seconds === 0) {
         clearInterval(interval);
-        setTimeout(() => {
-          window.location.href = "https://www.youtube.com/@Gugyto/";
-        }, 150); // krátký delay, aby prohlížeč stihl zpracovat pushState
+        window.location.href = "https://www.youtube.com/@Gugyto/";
       }
     }, 1000);
-
-    // Při kliknutí na "zpět" pokud jsme na duplicitním stavu, reloadujeme stránku (gugyto.cz),
-    // aby historie šla správně dál
-    window.addEventListener('popstate', (event) => {
-      if (event.state && event.state.page === 'gugyto-duplicate') {
-        window.location.href = window.location.href;
-      }
-    });
   </script>
 </body>
 </html>
