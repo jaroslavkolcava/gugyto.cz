@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>GUGÝTO | www.youtube.com/@Gugyto</title>
   <style>
+    /* ... (tvůj stávající CSS kód beze změny) ... */
     *, *::before, *::after {
       box-sizing: border-box;
     }
@@ -161,19 +162,27 @@
   </div>
 
   <script>
-    let seconds = 9;
-    const timer = document.getElementById('timer');
+    function startTimer() {
+      let seconds = 9;
+      const timer = document.getElementById('timer');
 
-    const interval = setInterval(() => {
-      seconds--;
-      if (seconds >= 0) {
-        timer.textContent = seconds;
-      }
-      if (seconds === 0) {
-        clearInterval(interval);
-        window.location.href = "https://www.youtube.com/@Gugyto/";
-      }
-    }, 1000);
+      const interval = setInterval(() => {
+        seconds--;
+        if (seconds >= 0) {
+          timer.textContent = seconds;
+        }
+        if (seconds === 0) {
+          clearInterval(interval);
+          window.location.href = "https://www.youtube.com/@Gugyto/";
+        }
+      }, 1000);
+    }
+
+    // Přepiš historii, aby gugyto.cz byl první v historii
+    window.history.replaceState(null, '', window.location.href);
+
+    // Spustí timer
+    startTimer();
   </script>
 </body>
 </html>
