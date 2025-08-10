@@ -57,8 +57,8 @@
       align-items: center;
       justify-content: center;
       color: white;
-      width: 42px; /* trochu větší */
-      height: 42px; /* trochu větší */
+      width: 42px;
+      height: 42px;
       transition: transform 0.25s ease, filter 0.25s ease, color 0.25s ease;
       filter: drop-shadow(0 0 0.5px white);
     }
@@ -66,7 +66,7 @@
     .social-icons a:hover {
       transform: scale(1.25);
       filter: drop-shadow(0 0 4px currentColor);
-      color: currentColor; /* Tohle je klíčové, aby barva přenesla do svg */
+      color: currentColor;
     }
 
     svg {
@@ -76,6 +76,11 @@
       stroke: white;
       stroke-width: 1.5;
       transition: stroke 0.25s ease;
+    }
+
+    /* Instagram má slabší tah, aby nebyla tučnější */
+    .social-icons a.instagram svg {
+      stroke-width: 1;
     }
 
     .social-icons a.youtube:hover svg { stroke: #FF0000; }
