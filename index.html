@@ -33,7 +33,7 @@
     }
 
     img {
-      max-height: 80vh; /* Větší logo */
+      max-height: 80vh;
       max-width: 90vw;
       height: auto;
       width: auto;
@@ -57,8 +57,8 @@
       align-items: center;
       justify-content: center;
       color: white;
-      width: 44px;
-      height: 44px;
+      width: 42px; /* trochu větší */
+      height: 42px; /* trochu větší */
       transition: transform 0.25s ease, filter 0.25s ease, color 0.25s ease;
       filter: drop-shadow(0 0 0.5px white);
     }
@@ -66,12 +66,12 @@
     .social-icons a:hover {
       transform: scale(1.25);
       filter: drop-shadow(0 0 4px currentColor);
-      color: inherit;
+      color: currentColor; /* Tohle je klíčové, aby barva přenesla do svg */
     }
 
     svg {
-      width: 28px;
-      height: 28px;
+      width: 24px;
+      height: 24px;
       fill: none;
       stroke: white;
       stroke-width: 1.5;
@@ -107,12 +107,12 @@
         max-height: 70vh;
       }
       .social-icons a {
-        width: 38px;
-        height: 38px;
+        width: 36px;
+        height: 36px;
       }
       svg {
-        width: 24px;
-        height: 24px;
+        width: 20px;
+        height: 20px;
         stroke-width: 1.2;
       }
       .countdown {
@@ -143,15 +143,12 @@
       </a>
       <a href="https://www.instagram.com/martingugyto" target="_blank" aria-label="Instagram" class="instagram" rel="noopener noreferrer">
         <svg viewBox="0 0 24 24" aria-hidden="true" role="img" xmlns="http://www.w3.org/2000/svg">
-          <rect x="2" y="2" width="20" height="20" rx="5" ry="5" stroke="currentColor" fill="none" stroke-width="1.5"/>
-          <circle cx="12" cy="12" r="4" stroke="currentColor" fill="none" stroke-width="1.5"/>
-          <circle cx="17.5" cy="6.5" r="1.5" fill="none" stroke="currentColor" stroke-width="1.5"/>
+          <path d="M7.75 2h8.5A5.75 5.75 0 0122 7.75v8.5A5.75 5.75 0 0116.25 22h-8.5A5.75 5.75 0 012 16.25v-8.5A5.75 5.75 0 017.75 2zm0 1.5A4.25 4.25 0 003.5 7.75v8.5A4.25 4.25 0 007.75 20.5h8.5a4.25 4.25 0 004.25-4.25v-8.5A4.25 4.25 0 0016.25 3.5h-8.5zm8.53 2.22a1.12 1.12 0 11-2.24 0 1.12 1.12 0 012.24 0zM12 7a5 5 0 110 10 5 5 0 010-10zm0 1.5a3.5 3.5 0 100 7 3.5 3.5 0 000-7z"/>
         </svg>
       </a>
       <a href="https://www.tiktok.com/@gugyto" target="_blank" aria-label="TikTok" class="tiktok" rel="noopener noreferrer">
         <svg viewBox="0 0 24 24" aria-hidden="true" role="img" xmlns="http://www.w3.org/2000/svg">
-          <path d="M9.963 2.17v12.42a4.05 4.05 0 11-4.05-4.05h3.04v3.615a7.05 7.05 0 117.05-7.05h-3.04z"
-                stroke="currentColor" fill="none" stroke-width="1.5" transform="translate(1,1.5)"/>
+          <path d="M9.963 2.17v12.42a4.05 4.05 0 11-4.05-4.05h3.04v3.615a7.05 7.05 0 117.049-7.05h-3.04z"/>
         </svg>
       </a>
     </div>
