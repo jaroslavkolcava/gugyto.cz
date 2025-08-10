@@ -5,11 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>GUGÝTO | www.youtube.com/@Gugyto</title>
   <style>
-    /* ... (tvůj stávající CSS kód beze změny) ... */
+    /* (ponechal jsem tvůj původní styl beze změny) */
     *, *::before, *::after {
       box-sizing: border-box;
     }
-
     html, body {
       margin: 0;
       padding: 0;
@@ -21,7 +20,6 @@
       overflow: hidden;
       text-align: center;
     }
-
     .wrapper {
       height: 100vh;
       width: 100%;
@@ -32,7 +30,6 @@
       padding: 5px 10px 15px;
       gap: 0;
     }
-
     img {
       max-height: 80vh;
       max-width: 90vw;
@@ -42,7 +39,6 @@
       display: block;
       margin: 0 auto 4px auto;
     }
-
     .social-icons {
       margin: 0;
       padding: 0;
@@ -52,7 +48,6 @@
       flex-wrap: nowrap;
       margin-bottom: 8px;
     }
-
     .social-icons a {
       display: inline-flex;
       align-items: center;
@@ -63,13 +58,11 @@
       transition: transform 0.25s ease, filter 0.25s ease, color 0.25s ease;
       filter: drop-shadow(0 0 0.5px white);
     }
-
     .social-icons a:hover {
       transform: scale(1.25);
       filter: drop-shadow(0 0 4px currentColor);
       color: inherit;
     }
-
     svg {
       width: 24px;
       height: 24px;
@@ -78,12 +71,10 @@
       stroke-width: 1.5;
       transition: stroke 0.25s ease;
     }
-
     .social-icons a.youtube:hover svg { stroke: #FF0000; }
     .social-icons a.facebook:hover svg { stroke: #1877F2; }
     .social-icons a.instagram:hover svg { stroke: #E1306C; }
     .social-icons a.tiktok:hover svg { stroke: #69C9D0; }
-
     .countdown {
       font-size: 1.2rem;
       font-weight: 500;
@@ -91,18 +82,15 @@
       margin: 8px 0 0 0;
       padding: 0;
     }
-
     #timer {
       font-weight: 700;
       animation: pulse 1.2s infinite ease-in-out;
       display: inline-block;
     }
-
     @keyframes pulse {
       0%, 100% { transform: scale(1); opacity: 1; }
       50% { transform: scale(1.2); opacity: 0.7; }
     }
-
     @media (max-width: 480px) {
       img {
         max-height: 70vh;
@@ -162,27 +150,22 @@
   </div>
 
   <script>
-    function startTimer() {
-      let seconds = 9;
-      const timer = document.getElementById('timer');
+    // Přidáme duplicitní záznam gugyto do historie
+    history.pushState({page: 'gugyto-duplicate'}, '', window.location.href);
 
-      const interval = setInterval(() => {
-        seconds--;
-        if (seconds >= 0) {
-          timer.textContent = seconds;
-        }
-        if (seconds === 0) {
-          clearInterval(interval);
-          window.location.href = "https://www.youtube.com/@Gugyto/";
-        }
-      }, 1000);
-    }
+    let seconds = 9;
+    const timer = document.getElementById('timer');
 
-    // Přepiš historii, aby gugyto.cz byl první v historii
-    window.history.replaceState(null, '', window.location.href);
-
-    // Spustí timer
-    startTimer();
+    const interval = setInterval(() => {
+      seconds--;
+      if (seconds >= 0) {
+        timer.textContent = seconds;
+      }
+      if (seconds === 0) {
+        clearInterval(interval);
+        window.location.href = "https://www.youtube.com/@Gugyto/";
+      }
+    }, 1000);
   </script>
 </body>
 </html>
